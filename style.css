@@ -1,0 +1,12 @@
+
+#gridDiv {
+    display: flex;
+    flex-wrap: wrap;
+    width: 480px;
+    height: 480px;
+}
+
+.box {
+    display: flex;
+  
+}
