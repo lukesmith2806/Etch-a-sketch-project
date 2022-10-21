@@ -37,7 +37,12 @@ function hoverOverButton() {
 }
 
 function buttonClicked() {
-    console.log("you clicked me");
+     let promptInput = prompt("Enter a number of grids");
+     if (promptInput !== null && parseInt(promptInput) !== null) {
+        if(parseInt(promptInput) < 50) {
+            createGrids(parseInt(promptInput));
+        }
+     }
 }
 
 function clearGrids() {
