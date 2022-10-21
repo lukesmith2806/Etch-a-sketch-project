@@ -1,4 +1,11 @@
 
+
+const btn = document.querySelector('button');
+btn.addEventListener('click', event => {
+    buttonClicked();
+});
+
+
 function createGrids(numGrids) {
     const gridContainer = document.getElementById('gridDiv');
     clearGrids();
@@ -13,7 +20,7 @@ function createGrids(numGrids) {
         gridBox.style.backgroundColor = 'red'
     
         gridBox.classList.add('box');
-        
+        gridBox.addEventListener('mouseenter', hoverOverButton);
         
       
         gridContainer.appendChild(gridBox);
@@ -21,15 +28,23 @@ function createGrids(numGrids) {
     
 }
 
-createGrids(2);
+createGrids(40);
 
+function hoverOverButton() {
+    
+    this.style.backgroundColor = 'black';
+    
+}
 
+function buttonClicked() {
+    console.log("you clicked me");
+}
 
 function clearGrids() {
     const a = document.getElementById('gridDiv');
     const grids = a.querySelectorAll('.box');
-    console.log(grids);
+  
     grids.forEach(ch => a.removeChild(ch));
-    console.log(a);
+  
     
 }
